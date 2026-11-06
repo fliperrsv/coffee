@@ -45,4 +45,4 @@ coffee/
 
 ## Ссылка
 
-fliperrsv.github.io/coffee/
+https://fliperrsv.github.io/coffee
