@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Кофейня «Берёза» в центре Рузы: свежеобжаренные зерна, домашние десерты и завтраки весь день.">
+  <title>Кофейня «Берёза» — кофе, ради которого хочется проснуться</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Прелоадер и полоса прокрутки -->
+  <div class="preloader" id="preloader">
+    <div class="preloader-cup">☕</div>
+    <p>Завариваем кофе…</p>
+  </div>
+  <div class="progress" id="progress"></div>
+
+  <header class="header">
+    <a class="logo" href="#top">☕ <span>Берёза</span></a>
+    <nav class="nav" id="nav">
+      <a href="#menu">Меню</a>
+      <a href="#about">О нас</a>
+      <a href="#gallery">Галерея</a>
+      <a href="#booking">Контакты</a>
+    </nav>
+    <a href="#booking" class="btn btn-solid btn-small">Забронировать</a>
+    <button class="burger" id="burger" aria-label="Открыть меню">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <main id="top">
+
+    <!-- ГЕРОЙ -->
+    <section class="hero">
+      <img src="img/hero.jpg" alt="Чашка капучино у окна кофейни" class="hero-img" onerror="imgFallback(this)">
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <p class="hero-tag">Кофейня в центре Рузы</p>
+        <h1>Кофе, ради которого<br>хочется проснуться</h1>
+        <p class="hero-text">Свежеобжаренные зёрна, домашние десерты и завтраки весь день. Уютное место, где время замедляется.</p>
+        <div class="hero-actions">
+          <a href="#menu" class="btn btn-solid">Смотреть меню</a>
+          <a href="#booking" class="btn btn-outline">Забронировать столик</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ПРЕИМУЩЕСТВА -->
+    <section class="features section" id="about">
+      <p class="section-tag">Почему к нам возвращаются</p>
+      <h2 class="section-title">Три причины заглянуть</h2>
+      <div class="features-grid">
+        <article class="card feature-card reveal">
+          <div class="feature-icon">🫘</div>
+          <h3>Свежая обжарка</h3>
+          <p>Зёрна прибывают каждую неделю от небольших обжарщиков — вы всегда пробуете кофе последнего урожая.</p>
+        </article>
+        <article class="card feature-card reveal">
+          <div class="feature-icon">🥐</div>
+          <h3>Свои десерты</h3>
+          <p>Круассаны, чизкейки и эклеры печёт наш кондитер каждое утро. К 12 дня самое вкусное уже разобрано.</p>
+        </article>
+        <article class="card feature-card reveal">
+          <div class="feature-icon">🌿</div>
+          <h3>Тихий уют</h3>
+          <p>Мягкий свет, живые растения и музыка на виниле. Работать, читать и болтать — всё уместно.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ЦИФРЫ -->
+    <section class="stats section">
+      <div class="stats-grid">
+        <div class="stat reveal">
+          <span class="stat-num" data-target="12">0</span>
+          <span class="stat-label">сортов кофе</span>
+        </div>
+        <div class="stat reveal">
+          <span class="stat-num" data-target="340">0</span>
+          <span class="stat-label">чашек в день</span>
+        </div>
+        <div class="stat reveal">
+          <span class="stat-num" data-target="5">0</span>
+          <span class="stat-label">лет с вами</span>
+        </div>
+        <div class="stat reveal">
+          <span class="stat-num" data-target="98">0</span>
+          <span class="stat-label">% вернулись снова</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- МЕНЮ -->
+    <section class="menu section" id="menu">
+      <p class="section-tag">Меню</p>
+      <h2 class="section-title">Любимое — в одной витрине</h2>
+      <p class="section-text">Цены честные, порции щедрые. Полное меню с сезонными напитками — в кофейне.</p>
+      <div class="menu-grid">
+        <article class="card dish-card reveal">
+          <img src="img/cappuccino.jpg" alt="Капучино" onerror="imgFallback(this)">
+          <div class="dish-body">
+            <div class="dish-row"><h3>Капучино</h3><span class="price">220 ₽</span></div>
+            <p>Бархатная пенка на эспрессо из зерна светлой обжарки.</p>
+            <span class="badge">Хит</span>
+          </div>
+        </article>
+        <article class="card dish-card reveal">
+          <img src="img/latte.jpg" alt="Латте на фисташковом молоке" onerror="imgFallback(this)">
+          <div class="dish-body">
+            <div class="dish-row"><h3>Латте на фисташковом молоке</h3><span class="price">260 ₽</span></div>
+            <p>Мягкий, ореховый, с авторским сиропом собственного варения.</p>
+          </div>
+        </article>
+        <article class="card dish-card reveal">
+          <img src="img/cheesecake.jpg" alt="Чизкейк «Берёза»" onerror="imgFallback(this)">
+          <div class="dish-body">
+            <div class="dish-row"><h3>Чизкейк «Берёза»</h3><span class="price">290 ₽</span></div>
+            <p>Классический нью-йоркский, с ягодами и мятой.</p>
+            <span class="badge">Хит</span>
+          </div>
+        </article>
+        <article class="card dish-card reveal">
+          <img src="img/croissant.jpg" alt="Круассан" onerror="imgFallback(this)">
+          <div class="dish-body">
+            <div class="dish-row"><h3>Круассан</h3><span class="price">180 ₽</span></div>
+            <p>Слоистый, румяный, из масла 82,5%. Печём с 7 утра.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ОТЗЫВЫ -->
+    <section class="reviews section">
+      <p class="section-tag">Отзывы</p>
+      <h2 class="section-title">Что говорят гости</h2>
+      <div class="review-slider card">
+        <div class="review-track" id="reviewTrack">
+          <div class="review-slide">
+            <p class="review-stars">★★★★★</p>
+            <p class="review-text">«Лучший капучино в Рузе, без шуток. Прихожу каждое утро перед работой — там помнят мой заказ».</p>
+            <p class="review-author">Анна, постоянный гость</p>
+          </div>
+          <div class="review-slide">
+            <p class="review-stars">★★★★★</p>
+            <p class="review-text">«Уютно, тихо, вайфай быстрый — работаю здесь по выходным. Чизкейк «Берёза» — отдельный вид удовольствия».</p>
+            <p class="review-author">Дмитрий, фрилансер</p>
+          </div>
+          <div class="review-slide">
+            <p class="review-stars">★★★★★</p>
+            <p class="review-text">«Зашли случайно, вышли с круассанами и планом вернуться с друзьями. Атмосфера — как у друзей в гостях».</p>
+            <p class="review-author">Мария и Ольга</p>
+          </div>
+        </div>
+        <div class="review-dots" id="reviewDots"></div>
+      </div>
+    </section>
+
+    <!-- ГАЛЕРЕЯ -->
+    <section class="gallery section" id="gallery">
+      <p class="section-tag">Галерея</p>
+      <h2 class="section-title">Загляните до визита</h2>
+      <div class="gallery-grid">
+        <img src="img/hall.jpg" alt="Зал кофейни" onerror="imgFallback(this)">
+        <img src="img/beans.jpg" alt="Кофейные зёрна" onerror="imgFallback(this)">
+        <img src="img/barista.jpg" alt="Бариста за работой" onerror="imgFallback(this)">
+        <img src="img/latte.jpg" alt="Фисташковый латте" onerror="imgFallback(this)">
+      </div>
+    </section>
+
+    <!-- БРОНИРОВАНИЕ -->
+    <section class="booking section" id="booking">
+      <p class="section-tag">Бронирование</p>
+      <h2 class="section-title">Займите столик у окна</h2>
+      <form class="booking-form card" id="bookingForm" novalidate>
+        <label>
+          Имя
+          <input type="text" name="name" required placeholder="Как к вам обращаться?">
+        </label>
+        <label>
+          Телефон
+          <input type="tel" name="phone" id="phone" required placeholder="+7 (___) ___-__-__">
+        </label>
+        <label>
+          Дата и время
+          <input type="datetime-local" name="datetime" required>
+        </label>
+        <label>
+          Гостей
+          <select name="guests">
+            <option>1</option><option selected>2</option>
+            <option>3</option><option>4</option><option>5+</option>
+          </select>
+        </label>
+        <p class="form-error" id="formError" hidden>Проверьте имя и телефон — что-то заполнено не так.</p>
+        <button type="submit" class="btn btn-solid btn-wide">Отправить заявку</button>
+        <p class="form-note">Перезвоним в течение 15 минут и подтвердим столик.</p>
+      </form>
+      <div class="booking-success card" id="bookingSuccess" hidden>
+        <h3>☕ Заявка принята!</h3>
+        <p>Перезвоним в течение 15 минут и подтвердим бронь. До встречи в «Берёзе»!</p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <p class="footer-logo">☕ Берёза</p>
+    <p>Руза, ул. Советская, 14 · ежедневно 8:00–22:00</p>
+    <p><a href="tel:+79001234567">+7 (900) 123-45-67</a></p>
+    <p class="footer-copy">© 2026 Кофейня «Берёза»</p>
+  </footer>
+
+  <button class="to-top" id="toTop" aria-label="Наверх">↑</button>
+
+  <script src="script.js"></script>
+</body>
+</html>
